@@ -21,10 +21,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 async def verdad(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("🎲 VERDAD:\n" + random.choice(verdades))
+    await update.message.reply_text(
+        "🎲 VERDAD:\n" + random.choice(verdades)
+    )
 
 async def reto(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("🔥 RETO:\n" + random.choice(retos))
+    await update.message.reply_text(
+        "🔥 RETO:\n" + random.choice(retos)
+    )
 
 def main():
     token = os.getenv("BOT_TOKEN")
